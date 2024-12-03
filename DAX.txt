@@ -1,0 +1,14 @@
+Calendar = 
+ADDCOLUMNS(
+    CALENDAR(
+        MIN('Spotify Dataset'[Date]),
+        MAX('Spotify Dataset'[Date])
+    ),
+    "Year", YEAR([Date]),
+    "Quarter", QUARTER([Date]),
+    "Quater (Q)", FORMAT([Date], "QQ"),
+    "Month", MONTH([Date]),
+    "MonthName", FORMAT([Date], "MMMM"),
+    "Day of Week", WEEKDAY([Date]),
+    "DayName", FORMAT([Date], "dddd")
+)
